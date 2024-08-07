@@ -1,0 +1,80 @@
+POST http://127.0.0.1:3000/api/profile/registrarse
+Content-Type: application/json
+
+{
+    "email": "Juan.pinto30@gmail.com", 
+    "password": "12345", 
+    "profile_picture": "FullStackDeveloper",
+    "username": "admin",
+    "is_admin": true
+}
+###
+GET http://127.0.0.1:3000/api/events/get-all
+    Content-Type: application/json
+
+###
+POST http://127.0.0.1:3000/api/events/add
+Content-Type: application/json
+
+{
+"user_id": 1,   
+"title": 1,
+"description": "tocata 3", 
+"date": "2024-07-31T00:00:00.000Z", 
+"location": "2024-07-31T00:00:00.000Z", 
+"ticket_price": 10000, 
+"tickets_available": 100,
+"img_url": "linkpruebafoto"
+}
+###
+
+POST http://127.0.0.1:3000/api/profile/registrarse
+Content-Type: application/json
+
+{
+    "email": "juan@juan.cl",
+    "password": "12345fdsad6",
+    "profile_picture": "hola mundo",
+    "username": "comoestas",
+    "is_admin": true
+}
+###
+POST http://127.0.0.1:3000/api/profile/login
+Content-Type: application/json
+
+{
+    "email": "Juan.pinto36@gmail.com", 
+    "password": "12345", 
+    "profile_picture": "FullStackDeveloper",
+    "username": "admin",
+    "is_admin": true
+}
+###
+POST http://127.0.0.1:3000/api/profile/login
+Content-Type: application/json
+
+{
+    "email": "juanito@juan.cl",
+    "password": "12345fdasdsssad6",
+    "profile_picture": "hola mundo",
+    "username": "comoestas",
+    "is_admin": true
+}
+###
+PUT http://127.0.0.1:3000/api/profile/update/1
+Content-Type: application/json
+
+{
+    "email": "juanito@juan.cl",
+    "password": "12345fdasdsssad6",
+    "profile_picture": "hola mundo",
+    "username": "comoestas",
+    "is_admin": true
+}
+###
+
+
+
+GET http://127.0.0.1:3000/api/profile/perfil
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ikp1YW4ucGludG8zNkBnbWFpbC5jb20iLCJpYXQiOjE3MjI0NjUyNDcsImV4cCI6MTcyMjQ2ODg0N30.FHfXfqgJSfeLDGW3skSXoG1CRNTR6Gw9xhDGk9MB9iY
