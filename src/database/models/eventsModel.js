@@ -123,10 +123,7 @@ const geteventsByUser = async (email) => {
 const getevents = async () => {
     try {
         const consulta = `
-        SELECT ev.event_id, ev.title, ev.description, ev.date, 
-        ev.location, ev.ticket_price, ev.tickets_available, ev.img_url, u.user_id
-        FROM eventos ev
-        INNER JOIN users u ON u.user_id = ev.user_id;`;
+        SELECT * from Eventos`;
 
         const { rows } = await database.query(consulta);
 

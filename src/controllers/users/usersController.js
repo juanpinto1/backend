@@ -7,10 +7,10 @@ const add_user_controller = async (req, res, next) => {
     try {
         const { email, password, username, profile_picture, is_admin } = req.body;
 
-        const existingUser = await UsersCollection.getUserByEmail(email);
-        if (existingUser) {
-            return res.status(400).json({ error: 'El correo electrónico ya está registrado.' });
-        }
+       // const existingUser = await UsersCollection.getUserByEmail(email);
+       // if (existingUser) {
+         //   return res.status(400).json({ error: 'El correo electrónico ya está registrado.' });
+       // }
 
         const response = await UsersCollection.addUser(email, password, username, profile_picture, is_admin);
         res.status(201).json(response);
