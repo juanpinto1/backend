@@ -1,10 +1,15 @@
+
+https://backend-lino.onrender.com
+
+###
+
 POST https://backend-lino.onrender.com/api/profile/registrarse
 Content-Type: application/json
 
 {
-    "email": "Juan.pinto30@gmail.com", 
+    "email": "Juan.pinto20@gmail.com", 
     "password": "12345", 
-    "profile_picture": "FullStackDeveloper",
+    "profile_picture": "https://as01.epimg.net/img/comunes/fotos/fichas/deportistas/i/ibr/large/12187.png",
     "username": "admin",
     "is_admin": true
 }
@@ -17,25 +22,45 @@ POST http://127.0.0.1:3000/api/events/add
 Content-Type: application/json
 
 {
-"user_id": 1,   
-"title": 1,
+"user_id": 3,
+"title": "segunda tocata de usuario 3",
 "description": "tocata 3", 
 "date": "2024-07-31T00:00:00.000Z", 
 "location": "2024-07-31T00:00:00.000Z", 
 "ticket_price": 10000, 
 "tickets_available": 100,
 "img_url": "linkpruebafoto"
+
 }
 ###
+POST http://127.0.0.1:3000/api/events/mis-eventos
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ikp1YW4ucGludG8zNkBnbWFpbC5jb20iLCJpYXQiOjE3MjM0MjIwMzEsImV4cCI6MTcyMzQyNTYzMX0.h4YVARXvYFalkujet-5GYBMXRSPXzOBOPGGTnujMH8Q
 
+{
+   "email": "Juan.pinto36@gmail.com"
+}
+
+###
+
+PUT http://localhost:3000/api/events/update/8
+Content-Type: application/json
+
+{
+    "description": "se modifica dato",
+    "ticket_price": 100000.00
+}
+
+###
+###
 POST http://127.0.0.1:3000/api/profile/registrarse
 Content-Type: application/json
 
 {
-    "email": "juan@juan.cl",
-    "password": "12345fdsad6",
-    "profile_picture": "hola mundo",
-    "username": "comoestas",
+    "email": "Juan.pinto37@gmail.com", 
+    "password": "12345", 
+    "profile_picture": "FullStackDeveloper",
+    "username": "admin",
     "is_admin": true
 }
 ###
@@ -66,8 +91,8 @@ Content-Type: application/json
 
 {
     "email": "juanito@juan.cl",
-    "password": "12345fdasdsssad6",
-    "profile_picture": "hola mundo",
+    "password": "12345fdadasdsssad6",
+    "profile_picture": "hola amundo",
     "username": "comoestas",
     "is_admin": true
 }
@@ -77,4 +102,4 @@ Content-Type: application/json
 
 GET http://127.0.0.1:3000/api/profile/perfil
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ikp1YW4ucGludG8zNkBnbWFpbC5jb20iLCJpYXQiOjE3MjI0NjUyNDcsImV4cCI6MTcyMjQ2ODg0N30.FHfXfqgJSfeLDGW3skSXoG1CRNTR6Gw9xhDGk9MB9iY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imp1YW5hMUBjb3JyZW8uY29tIiwiaWF0IjoxNzIzMjYyMjY0fQ.Ae6JnH5tt2tNFfzHPHfgCCfoRWsSfjKfGQ8FeLyxVwo

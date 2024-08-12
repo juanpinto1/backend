@@ -1,16 +1,20 @@
 const router = require('express').Router();
-const { get_events_controller, add_event_controller, update_event_controller, delete_event_controller } = require('../../controllers/Events/EventsController');
+const { authMiddleware } = require("../../middlewares/authMiddleware");
+const {
+    get_events_controller,
+    get_Event_by_id,
+    add_Event_controller,
+    update_Event_controller,
+    delete_Event_controller,
+    get_events_by_user
+} = require('../../controllers/Events/EventsController');
 
-// Ruta para obtener todos los eventos
 router.get('/get-all', get_events_controller);
+router.get('/get/:id', get_Event_by_id);
+router.post('/mis-eventos', authMiddleware, get_events_by_user); // Cambiado a POST y ruta actualizada
 
-// Ruta para agregar un nuevo evento
-router.post('/add', add_event_controller);
-
-// Ruta para actualizar un evento existente
-router.put('/update/:event_id', update_event_controller);
-
-// Ruta para eliminar un evento
-router.delete('/delete/:event_id', delete_event_controller);
+router.post('/add', add_Event_controller);
+router.put('/update/:id', update_Event_controller);
+router.delete('/delete/:id', delete_Event_controller);
 
 module.exports = router;

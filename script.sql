@@ -1,4 +1,4 @@
--- Active: 1722729972892@@127.0.0.1@5432@eventos
+-- Active: 1722729972892@@127.0.0.1@5432@eventos_tnx7
 
 -- Crear la Base de Datos
 CREATE DATABASE eventos;
