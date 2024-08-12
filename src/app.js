@@ -14,9 +14,21 @@ app.use(express.json());
 
 app.use(morgan('dev'))
 
+const allowedOrigins = [
+  'http://localhost:5173', // Desarrollo local
+  'https://frontend-yab1.onrender.com', // Producción
+  // Agrega aquí más orígenes permitidos si es necesario
+];
+
 app.use(cors({
-    origin: 'https://backend-lino.onrender.com'
-}))
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('No permitido por CORS'));
+    }
+  }
+}));
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
