@@ -138,6 +138,24 @@ app.post("/api/users/registrarse", async (req, res) => {
         res.status(404).send('Pelicula no Encontrada');
       }
     });
+app.put('/update/:event_id', async (req, res) => {
+      const { event_id } = req.params;
+      const eventData = req.body;
+    
+      try {
+        // Encuentra el evento por ID y actualízalo
+        const updatedEvent = await Event.findByIdAndUpdate(event_id, eventData, { new: true });
+    
+        if (!updatedEvent) {
+          return res.status(404).json({ message: "Evento no encontrado" });
+        }
+    
+        res.json({ data: updatedEvent });
+      } catch (error) {
+        console.error("Error al actualizar evento:", error);
+        res.status(500).json({ message: "Error al actualizar evento" });
+      }
+    });
 
 
 module.exports = app;
