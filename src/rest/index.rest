@@ -43,15 +43,22 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imx1Y2FzQ
 
 ###
 
-PUT http://localhost:3000/api/events/update/8
+PUT http://127.0.0.1:5173/api/events/update/3
 Content-Type: application/json
 
-{
+{   "title":"cambios",
     "description": "se modifica dato",
-    "ticket_price": 100000.00
+    "ticket_price": 100000.00,
+    "date": "2024-07-31T00:00:00.000Z", 
+    "location": "2024-07-31T00:00:00.000Z", 
+    "tickets_available": 100,
+    "img_url": "linkpruebafoto"
 }
-
 ###
+DELETE http://127.0.0.1:5173/api/events/delete/4
+Content-Type: application/json
+
+
 ###
 POST https://backend-lino.onrender.com/api/profile/registrarse
 Content-Type: application/json
